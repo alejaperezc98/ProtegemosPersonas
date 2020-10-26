@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/perfil"
+            android:title="@string/menu_perfil" />
+        <item
+            android:id="@+id/nav_beneficiario"
+            android:icon="@drawable/beneficiario"
+            android:title="@string/menu_beneficiario" />
+        <item
+            android:id="@+id/nav_sedes"
+            android:icon="@drawable/sedes"
+            android:title="@string/menu_sedes" />
+        <item
+            android:id="@+id/nav_renovar"
+            android:icon="@drawable/renovar"
+            android:title="@string/menu_renovar" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_citas"
+                android:icon="@drawable/citas"
+                android:title="@string/menu_citas"/>
+            <item
+                android:id="@+id/nav_contactanos"
+                android:icon="@drawable/contactanos"
+                android:title="@string/menu_contactanos"/>
+        </menu>
+
+    </item>
+</menu>

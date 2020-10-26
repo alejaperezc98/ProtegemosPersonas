@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.perfil.PerfilFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text="Información Usuario"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="211dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:id="@+id/txt_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:text="Nombre(s)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Teléfono"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_ciudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Ciudad"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_ciudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Dirección"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_ref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Referid@"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_ref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Plan"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_emp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Empresa"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:id="@+id/txt_ape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Apellido(s)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_ape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_cel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celular"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_cel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_barrio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Barrio"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_barrio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_nref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono Referid@"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_nref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_fecv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de vencimiento"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_fecv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

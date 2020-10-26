@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.protegemos.protegemospersonas.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_beneficiario"
+        android:name="com.protegemos.protegemospersonas.ui.beneficiario.BeneficiarioFragment"
+        android:label="@string/menu_beneficiario"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.protegemos.protegemospersonas.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/nav_sedes"
+        android:name="com.protegemos.protegemospersonas.ui.sedes.SedesFragment"
+        android:label="@string/menu_sedes"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_renovar"
+        android:name="com.protegemos.protegemospersonas.ui.renovar.RenovarFragment"
+        android:label="@string/menu_renovar"
+        tools:layout="@layout/fragment_renovar" />
+    <fragment
+        android:id="@+id/nav_citas"
+        android:name="com.protegemos.protegemospersonas.ui.citas.CitasFragment"
+        android:label="@string/menu_citas"
+        tools:layout="@layout/fragment_citas" />
+    <fragment
+        android:id="@+id/nav_contactanos"
+        android:name="com.protegemos.protegemospersonas.ui.contactanos.ContactanosFragment"
+        android:label="@string/menu_contactanos"
+        tools:layout="@layout/fragment_contactanos" />
+</navigation>
