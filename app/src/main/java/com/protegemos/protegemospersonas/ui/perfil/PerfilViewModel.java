@@ -9,7 +9,7 @@ public class PerfilViewModel extends ViewModel{
 
     public PerfilViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("");
+        mText.setValue("Perfil");
     }
 
     public LiveData<String> getText() {

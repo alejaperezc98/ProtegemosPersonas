@@ -1,6 +1,9 @@
 package com.protegemos.protegemospersonas;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -60,4 +63,23 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.nav_web:
+                return true;
+
+            case R.id.nav_out:
+                return true;
+
+            /*case R.id.help:
+                showHelp();
+                return true;*/
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

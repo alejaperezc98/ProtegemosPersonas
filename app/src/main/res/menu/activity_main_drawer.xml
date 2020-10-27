@@ -22,17 +22,33 @@
             android:title="@string/menu_renovar" />
     </group>
 
-    <item android:title="">
+    <item tools:ignore="MenuTitle">
         <menu>
             <item
                 android:id="@+id/nav_citas"
                 android:icon="@drawable/citas"
-                android:title="@string/menu_citas"/>
+                android:title="@string/menu_citas" />
             <item
                 android:id="@+id/nav_contactanos"
                 android:icon="@drawable/contactanos"
-                android:title="@string/menu_contactanos"/>
+                android:title="@string/menu_contactanos" />
         </menu>
+    </item>
 
+    <item tools:ignore="MenuTitle">
+        <menu>
+            <item
+                android:id="@+id/nav_web"
+                android:icon="@drawable/web"
+                android:title="@string/menu_web" />
+            <item
+                android:id="@+id/nav_sobre"
+                android:icon="@drawable/sobre"
+                android:title="@string/menu_sobre" />
+            <item
+                android:id="@+id/nav_out"
+                android:icon="@drawable/cerrars"
+                android:title="@string/menu_out" />
+        </menu>
     </item>
 </menu>

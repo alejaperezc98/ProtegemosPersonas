@@ -6,72 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".ui.beneficiario.BeneficiarioFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="40dp">
+        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/crd_ben1"
-            android:layout_width="match_parent"
-            android:layout_height="73dp"
-            app:cardBackgroundColor="#D1F1EE">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/crd_ben2"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#F8F4F4" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cdr_ben3"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#F8F4F4" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cdr_ben4"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#F3EBEB" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/crd_ben5"
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#F3EBEB" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/crd_ben6"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#F3EBEB" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/crd_ben7"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#F3EBEB" />
-
-        <TextView
-            android:id="@+id/text_gallery"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:orientation="vertical" >
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/txt_bnom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nombre"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_bape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Apellido"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_bedad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Edad"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_par"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Parentesco"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_ben"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardBackgroundColor="#D1F1EE">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#CADCDB"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="40dp">
+
+                        <TextView
+                            android:id="@+id/lbl_nomb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/lbl_apeb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/lbl_edadb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/lbl_parb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/text_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

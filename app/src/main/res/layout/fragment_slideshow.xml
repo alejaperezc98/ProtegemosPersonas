@@ -6,6 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".ui.sedes.SedesFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_pasto"
+                    android:layout_width="match_parent"
+                    android:layout_height="139dp"
+                    android:src="@drawable/s_pasto" />
+
+                <ImageView
+                    android:id="@+id/img_ipiales"
+                    android:layout_width="match_parent"
+                    android:layout_height="139dp"
+                    android:src="@drawable/s_ipiales" />
+
+                <ImageView
+                    android:id="@+id/img_union"
+                    android:layout_width="match_parent"
+                    android:layout_height="141dp"
+                    android:src="@drawable/s_union" />
+
+                <ImageView
+                    android:id="@+id/img_pasis"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:src="@drawable/s_puerto" />
+
+                <ImageView
+                    android:id="@+id/img_mocoa"
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:src="@drawable/s_mocoa" />
+
+                <ImageView
+                    android:id="@+id/img_tumaco"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    android:src="@drawable/s_tumaco" />
+
+                <ImageView
+                    android:id="@+id/img_pitalito"
+                    android:layout_width="match_parent"
+                    android:layout_height="139dp"
+                    android:src="@drawable/s_pitalito" />
+
+                <ImageView
+                    android:id="@+id/img_popayan"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:src="@drawable/s_popayan" />
+
+                <ImageView
+                    android:id="@+id/img_neiva"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:src="@drawable/s_neiva" />
+
+                <ImageView
+                    android:id="@+id/img_cali"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:src="@drawable/s_cali" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/text_slideshow"
         android:layout_width="match_parent"

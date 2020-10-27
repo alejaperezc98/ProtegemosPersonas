@@ -53,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:text="Teléfono"
                 android:textStyle="bold" />
 
@@ -68,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:text="Ciudad"
                 android:textStyle="bold" />
 
@@ -83,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:text="Dirección"
                 android:textStyle="bold" />
 
@@ -98,6 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:text="Referid@"
                 android:textStyle="bold" />
 
@@ -113,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:text="Plan"
                 android:textStyle="bold" />
 
@@ -128,6 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:text="Empresa"
                 android:textStyle="bold" />
 
@@ -163,6 +169,7 @@
                 android:id="@+id/txt_cel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Celular"
                 android:textStyle="bold" />
 
@@ -176,6 +183,7 @@
                 android:id="@+id/txt_barrio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Barrio"
                 android:textStyle="bold" />
 
@@ -189,6 +197,7 @@
                 android:id="@+id/txt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Email"
                 android:textStyle="bold" />
 
@@ -202,6 +211,7 @@
                 android:id="@+id/txt_nref"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Teléfono Referid@"
                 android:textStyle="bold" />
 
@@ -215,6 +225,7 @@
                 android:id="@+id/txt_fecv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Fecha de vencimiento"
                 android:textStyle="bold" />
 

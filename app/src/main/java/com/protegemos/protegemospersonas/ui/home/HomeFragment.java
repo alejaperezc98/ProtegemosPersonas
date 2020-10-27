@@ -1,9 +1,11 @@
 package com.protegemos.protegemospersonas.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,15 +16,29 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.protegemos.protegemospersonas.R;
 
+
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
+    ImageView ips;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        ips=(ImageView) root.findViewById(R.id.ima_ips);
+
+        ips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ips = new Intent(HomeFragment.this, IpsFragment.class);
+            }
+        });
+
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -31,5 +47,6 @@ public class HomeFragment extends Fragment {
             }
         });
         return root;
+
     }
 }
