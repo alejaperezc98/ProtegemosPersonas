@@ -1,16 +1,21 @@
 package com.protegemos.protegemospersonas;
 
 import android.content.Intent;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.protegemos.protegemospersonas.ui.home.IpsFragment;
+import com.protegemos.protegemospersonas.ui.login.LoginActivity;
+import com.protegemos.protegemospersonas.ui.login.LoginViewModel;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -22,6 +27,7 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,22 +70,18 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.nav_web:
-                return true;
-
-            case R.id.nav_out:
-                return true;
-
-            /*case R.id.help:
-                showHelp();
-                return true;*/
-            default:
-                return super.onOptionsItemSelected(item);
+    public boolean onOptionItemSelected(MenuItem item)
+    {
+        int id=item.getItemId();
+        if (id==R.id.nav_out){
+            cerrarSesion();
         }
+        return super.onOptionsItemSelected(item);
     }
+
+    private void cerrarSesion() {
+        preferences.edit().clear().apply();
+    }
+
 
 }

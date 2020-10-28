@@ -30,14 +30,8 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ips=(ImageView) root.findViewById(R.id.ima_ips);
 
-        ips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ips = new Intent(HomeFragment.this, IpsFragment.class);
-            }
-        });
+        ips = root.findViewById(R.id.img_ips);
 
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
@@ -49,4 +43,6 @@ public class HomeFragment extends Fragment {
         return root;
 
     }
+
+
 }

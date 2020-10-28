@@ -27,10 +27,6 @@ import org.json.JSONObject;
 public class GalleryFragment extends Fragment implements Response.Listener<JSONObject>,Response.ErrorListener {
 
     private GalleryViewModel galleryViewModel;
-    ServiceProtegemos util = new ServiceProtegemos();
-    int bandera=0;
-
-    TextView lbl_nomb, lbl_apeb, lbl_edadb, lbl_parb;
 
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
@@ -42,10 +38,7 @@ public class GalleryFragment extends Fragment implements Response.Listener<JSONO
                 new ViewModelProvider(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
-        lbl_nomb=(TextView) root.findViewById(R.id.lbl_nomb);
-        lbl_apeb=(TextView) root.findViewById(R.id.lbl_apeb);
-        lbl_edadb=(TextView) root.findViewById(R.id.lbl_edadb);
-        lbl_parb=(TextView) root.findViewById(R.id.lbl_parb);
+
 
         request= Volley.newRequestQueue(getContext());
 
@@ -58,9 +51,6 @@ public class GalleryFragment extends Fragment implements Response.Listener<JSONO
         return root;
     }
 
-    private void service(){
-        String url="http://181.62.161.60/kubica/app/beneficiarios.php?con_cod=";
-    }
 
     @Override
     public void onErrorResponse(VolleyError error) {

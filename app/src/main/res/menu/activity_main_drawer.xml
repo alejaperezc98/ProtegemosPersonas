@@ -22,8 +22,9 @@
             android:title="@string/menu_renovar" />
     </group>
 
-    <item tools:ignore="MenuTitle">
-        <menu>
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_citas"
                 android:icon="@drawable/citas"
@@ -32,11 +33,11 @@
                 android:id="@+id/nav_contactanos"
                 android:icon="@drawable/contactanos"
                 android:title="@string/menu_contactanos" />
-        </menu>
-    </item>
+    </group>
 
-    <item tools:ignore="MenuTitle">
-        <menu>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_web"
                 android:icon="@drawable/web"
@@ -49,6 +50,5 @@
                 android:id="@+id/nav_out"
                 android:icon="@drawable/cerrars"
                 android:title="@string/menu_out" />
-        </menu>
-    </item>
+    </group>
 </menu>

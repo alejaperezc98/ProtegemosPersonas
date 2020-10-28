@@ -29,7 +29,7 @@
                     android:src="@drawable/ban_guia" />
 
                 <ImageView
-                    android:id="@+id/ima_ips"
+                    android:id="@+id/img_ips"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:clickable="true"
