@@ -9,13 +9,23 @@
         android:id="@+id/nav_home"
         android:name="com.protegemos.protegemospersonas.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_ips2"
+            app:destination="@id/nav_ips" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_exe"
+            app:destination="@id/nav_exe" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_rev2"
+            app:destination="@id/nav_rev" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_beneficiario"
         android:name="com.protegemos.protegemospersonas.ui.beneficiario.BeneficiarioFragment"
         android:label="@string/menu_beneficiario"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/datos_beneficiarios" />
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -42,4 +52,24 @@
         android:name="com.protegemos.protegemospersonas.ui.contactanos.ContactanosFragment"
         android:label="@string/menu_contactanos"
         tools:layout="@layout/fragment_contactanos" />
+
+    <fragment
+        android:id="@+id/nav_ips"
+        android:name="com.protegemos.protegemospersonas.ui.ips.IpsFragment"
+        android:label="@string/menu_ips"
+        tools:layout="@layout/fragment_ips" />
+
+    <fragment
+        android:id="@+id/nav_exe"
+        android:name="com.protegemos.protegemospersonas.ui.exequial.ExequialFragment"
+        android:label="@string/menu_exe"
+        tools:layout="@layout/fragment_exequial" />
+
+    <fragment
+        android:id="@+id/nav_rev"
+        android:name="com.protegemos.protegemospersonas.ui.revista.RevistaFragment"
+        android:label="@string/menu_rev"
+        tools:layout="@layout/fragment_revista" />
+
+
 </navigation>

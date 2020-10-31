@@ -17,6 +17,9 @@
     <string name="menu_web">Sitio Web</string>
     <string name="menu_sobre">Acerca de</string>
     <string name="menu_out">Cerrar sesion</string>
+    <string name="menu_ips">Servicios</string>
+    <string name="menu_exe">Previsión Exequial</string>
+    <string name="menu_rev">Revistas Virtuales</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Contrato</string>
     <string name="prompt_password">Contraseña</string>
@@ -28,4 +31,44 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="plan_unipersonal">PLAN UNIPERSONAL PLUS:</string>
+    <string name="plan_unip">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes.Tiene como beneficio adicional el Servicio Exequial. Las coberturas de este beneficio se encuentra en el Anexo N°01. Beneficiarios de este plan: Únicamente el titulas hast las 65 años</string>
+
+    <string name="plan_familiar">PLAN FAMILIAR:</string>
+    <string name="plan_fam">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes.Beneficiarios de este plan: Núclero familiarque habite en la misma casa o dependa económicamente del titular, máximo siete (7) beneficiarios. Se entregará dos (2) credenciales de lujo.Además tiene incluido un auxilio económico por fallecimiento del titular para gastos funerarios y/o exequiales(Causas del fallecimiento en ANEXO N°2).</string>
+
+    <string name="plan_familiarplus">PLAN FAMILIAR PLUS:</string>
+    <string name="plan_famp">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes.Tiene como beneficio adicional el Servicio Exequial, enfocado a brindar protección y tranquilidad al suscriptor y su núlceo familiar ante un fallecimiento. Las coberturas de este beneficio se encuentra en el Anexo N°01.Beneficiarios de este plan: Núclero familiarque habite en la misma casa o dependa económicamente del titular, máximo siete (7) beneficiarios, de los cuales dos (2) personas podrán ser de hasta 75 añps de edad, éstos deben ser:Dos (2) padres o dos (2) suegros del titular, los beneficiarios restantes de hasta 65 años*</string>
+
+    <string name="plan_vip">PLAN VIP:</string>
+    <string name="plan_vp">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes.Tiene como beneficio adicional el Servicio Exequial, enfocado a brindar protección y tranquilidad al suscriptor y su núlceo familiar ante un fallecimiento. Las coberturas de este beneficio se encuentra en el Anexo N°01.Beneficiarios de este plan: Núclero familiarque habite en la misma casa o dependa económicamente del titular, máximo siete (7) beneficiarios, de los cuales dos (2) personas podrán ser de hasta 75 añps de edad, éstos deben ser:Dos (2) padres o dos (2) suegros del titular, los beneficiarios restantes de hasta 65 años*</string>
+
+    <string name="plan_vipplus">PLAN VIP PLUS:</string>
+    <string name="plan_vpp">Orientado a brindar servicios de capacitación, educacuón, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes.Tiene como beneficio adicional el Servicio Exequial, enfocado a brindar protección y tranquilidad al suscriptor y su núlceo familiar ante un fallecimiento. Las coberturas de este beneficio se encuentra en el Anexo N°01.Beneficiarios de este plan: Núclero familiarque habite en la misma casa o dependa económicamente del titular, máximo siete (7) beneficiarios, de los cuales dos (2) personas podrán ser de hasta 75 añps de edad, éstos deben ser:Dos (2) padres o dos (2) suegros del titular, los beneficiarios restantes de hasta 65 años*</string>
+
+    <string name="plan_auxilio">PLAN AUXILIO ECONÓMICO POR FALLECIMIENTO:</string>
+    <string name="plan_aux">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes; con el gran beneficio, enfocado a brindar un apoyo económico por un valor de UN MILLÓN DE PESOS M/CTE ($1.000.000) para protección y tranquilidad del suscriptor y el núcleo familiar (beneficiarios) ante el deceso de algún integrante del grupo familiar protegido. Las condiciones y restricciones de este beneficio se encuentran en el Anexo N° 01. Beneficiarios de este plan: El Titular y núcleo familiar que habite en la misma casa o dependa económicamente del titular, máximo siete (7) beneficiarios, de los cuales dos (2) personas podrán ser de hasta 75 años de edad, éstos deben ser: Dos (2) padres o dos (2) suegros del titular, los beneficiarios restantes de hasta 65 años*.</string>
+
+    <string name="plan_auxilioplus">PLAN AUXILIO ECONÓMICO POR FALLECIMIENTO PLUS:</string>
+    <string name="plan_auxp">"Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes; con el gran beneficio, enfocado a brindar un apoyo económico por un valor de UN MILLÓN DE PESOS M/CTE ($1.000.000) para protección y tranquilidad del suscriptor y el núcleo familiar (beneficiarios) ante el deceso de algún integrante del grupo familiar protegido. Las condiciones y restricciones de este beneficio se encuentran en el Anexo N° 01. Beneficiarios de este plan: El Titular y núcleo familiar que habite en la misma casa o dependa económicamente del titular, máximo siete (7) beneficiarios, de los cuales dos (2) personas podrán ser sin límite de edad, éstos que deben ser: Dos (2) padres o dos (2) suegros del titular, los beneficiarios restantes de hasta 65 años*.*</string>
+
+    <string name="plan_platino">PLAN PLATINO PLUS:</string>
+    <string name="plan_plat">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes; con el gran beneficio del plan ESPECIAL de SERVICIO EXEQUIAL enfocado a brindar protección y tranquilidad al suscriptor y el núcleo familiar (beneficiarios) de la tarjeta de descuentos ante un fallecimiento. Cubriendo el servicio funerario de acuerdo con las condiciones del plan descritas en el Anexo N°1 o un AUXILIO POR EL NO USO DEL SERVICIO FUNERARIO, por valor de UN MILLÓN QUINIENTOS MIL PESOS M/CTE ($1.500.000.oo) de acuerdo con las condiciones descritas en el Anexo N°1 del presente contrato. Beneficiarios de este plan: Titular y núcleo familiar que habite en la misma casa o dependa económicamente del titular, máximo nueve (9) beneficiarios, de los cuales dos (2) personas podrán ser sin límite de edad, deberán tener como parentesco: cónyuge, padres ó suegros. Los beneficiarios (7) restantes deben ser menores de 65 años de los cuales uno (1) podrá ser sin grado de consanguinidad.</string>
+
+    <string name="plan_diamante">PLAN DIAMANTE:</string>
+    <string name="plan_dm">Orientado a brindar servicios de capacitación, educación, recreación, turismo, salud y asesoría jurídica, a través de la atención y respaldo de nuestros anunciantes; con el gran beneficio del plan ESPECIAL de SERVICIO EXEQUIAL enfocado a brindar protección y tranquilidad al suscriptor y el núcleo familiar (beneficiarios) de la tarjeta de descuentos ante un fallecimiento. Cubriendo el servicio funerario en sala preferencial en las funerarias de la Red de Convenio de acuerdo con las condiciones del plan descritas en el Anexo N°1 o un AUXILIO POR EL NO USO DEL SERVICIO FUNERARIO, por valor de DOS MILLONES DE PESOS M/CTE ($2.000.000.oo) de acuerdo con las condiciones descritas en el Anexo N°1 del presente contrato. Beneficiarios de este plan: Titular y núcleo familiar que habite en la misma casa o dependa económicamente del titular, máximo once (11) beneficiarios, de los cuales dos (2) personas podrán ser sin límite de edad, deberán tener como parentesco: cónyuge, padres ó suegros. Los nueve (9) beneficiarios restantes deben ser menores de 65 años de los cuales dos (2) podrán ser sin grado de consanguinidad.</string>
+
+    <string name="plan_menores75">Para personas menores de 75 años:</string>
+    <string name="plan_m75">Muerte Natural; para el titular a partir de la fecha de la cancelación total de la suscripción deberán transcurrir cuarenta y cinco (45) días calendario y para los beneficiarios deberán transcurrir noventa (90) días calendario, (Incluyendo Bebé futuro y/o nacido vivo), sólo así aplicará este beneficio. El suicidio se considera muerte natural. Muerte accidental o violenta se cubrirá a partir de los ocho (8) días calendario de la cancelación total de la suscripción, para lo cual es necesario presentar a la empresa una certificación expedida por la autoridad competente donde conste que el deceso se presentó en forma accidental o violenta.</string>
+
+    <string name="plan_mayores75">Para personas mayores de 75 años:</string>
+    <string name="plan_my75">Los beneficiarios que superen los SETENTA Y CINCO (75) años de edad tendrán acceso al servicio exequial previo cumplimiento de un período de 120 días calendario contados a partir de la cancelación total de la suscripción por fallecimiento accidental, o natural.</string>
+
+    <string name="plan_egpmenores">Para personas menores de 75 años:</string>
+    <string name="plan_egpmn">Si al momento de la afiliación el titular o beneficiario menor de SETENTA Y CINCO (75) años de edad padece alguna enfermedad preexistente y consecuencia de ella fallece, ó si durante la vigencia del contrato detectan una enfermedad grave, y producto de ésta se presenta el fallecimiento, el servicio tendrá cobertura cuando hayan pasado ciento ochenta (180) días calendario desde la cancelación total de la suscripción.</string>
+
+    <string name="plan_egpmayores">Para personas mayores de 75 años:</string>
+    <string name="plan_egpmy">Si al momento de la afiliación el beneficiario mayor de SETENTA Y CINCO (75) años de edad padece alguna enfermedad preexistente y consecuencia de ella fallece, ó si durante la vigencia del contrato detectan una enfermedad grave, y producto de éstas se presenta el fallecimiento, no habrá lugar a la cobertura del servicio exequial.</string>
+
 </resources>

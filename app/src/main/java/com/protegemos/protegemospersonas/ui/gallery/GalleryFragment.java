@@ -4,20 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 import com.protegemos.protegemospersonas.R;
 import com.protegemos.protegemospersonas.data.ServiceProtegemos;
@@ -40,7 +36,7 @@ public class GalleryFragment extends Fragment implements Response.Listener<JSONO
 
         galleryViewModel =
                 new ViewModelProvider(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        View root = inflater.inflate(R.layout.datos_beneficiarios, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         lbl_nomb=(TextView) root.findViewById(R.id.lbl_nomb);
         lbl_apeb=(TextView) root.findViewById(R.id.lbl_apeb);
