@@ -1,25 +1,33 @@
 package com.protegemos.protegemospersonas;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Menu;
+import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.navigation.NavigationView;
+import com.protegemos.protegemospersonas.ui.home.IpsFragment;
+import com.protegemos.protegemospersonas.ui.login.LoginActivity;
+import com.protegemos.protegemospersonas.ui.login.LoginViewModel;
+
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,29 +70,18 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public boolean onOptionItemSelected(MenuItem item){
+    public boolean onOptionItemSelected(MenuItem item)
+    {
         int id=item.getItemId();
-
-        if (id==R.id.action_settings){
-            return true;
+        if (id==R.id.nav_out){
+            cerrarSesion();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    /*@Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id=item.getItemId();
-        if (id==R.id.nav_web){
-            Uri uri=Uri.parse("https://revistaprotegemos.com.co/revistas.html");
-            Intent intent=new Intent(Intent.ACTION_VIEW,uri);
-            startActivity(intent);
-        }
-        return true;
+    private void cerrarSesion() {
+        preferences.edit().clear().apply();
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }*/
 
 }

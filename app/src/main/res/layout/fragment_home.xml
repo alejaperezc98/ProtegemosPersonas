@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -22,43 +21,52 @@
                 android:orientation="vertical"
                 android:paddingTop="10dp">
 
-
-                <ImageButton
+                <ImageView
                     android:id="@+id/img_guia"
                     android:layout_width="match_parent"
-                    android:layout_height="108dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ban_guia"
-                    android:tint="#00FFFFFF" />
+                    android:layout_height="160dp"
+                    android:clickable="true"
+                    android:src="@drawable/ban_guia" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/img_ips"
                     android:layout_width="match_parent"
-                    android:layout_height="108dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="fitXY"
+                    android:layout_height="160dp"
+                    android:clickable="true"
                     android:src="@drawable/ban_ips" />
 
-                <ImageButton
-                    android:id="@+id/img_ex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="108dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="fitXY"
+
+                <ImageView
+                    android:id="@+id/img_exe"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:clickable="true"
                     android:src="@drawable/ban_ex" />
 
-                <ImageButton
-                    android:id="@+id/img_rev"
+                <ImageView
+                    android:id="@+id/img_revista"
                     android:layout_width="match_parent"
-                    android:layout_height="108dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="fitXY"
+                    android:layout_height="162dp"
+                    android:clickable="true"
                     android:src="@drawable/ban_revista" />
 
 
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
