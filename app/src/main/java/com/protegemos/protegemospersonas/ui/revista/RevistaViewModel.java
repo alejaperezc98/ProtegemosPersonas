@@ -10,7 +10,7 @@ public class RevistaViewModel  extends ViewModel {
 
     public RevistaViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Revista fragment");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

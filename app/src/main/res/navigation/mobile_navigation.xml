@@ -25,7 +25,7 @@
         android:id="@+id/nav_beneficiario"
         android:name="com.protegemos.protegemospersonas.ui.beneficiario.BeneficiarioFragment"
         android:label="@string/menu_beneficiario"
-        tools:layout="@layout/datos_beneficiarios" />
+        tools:layout="@layout/fragment_beneficiario"/>
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -52,6 +52,12 @@
         android:name="com.protegemos.protegemospersonas.ui.contactanos.ContactanosFragment"
         android:label="@string/menu_contactanos"
         tools:layout="@layout/fragment_contactanos" />
+
+    <fragment
+        android:id="@+id/nav_sobre"
+        android:name="com.protegemos.protegemospersonas.ui.sobre.SobreFragment"
+        android:label="@string/menu_sobre"
+        tools:layout="@layout/fragment_sobre" />
 
     <fragment
         android:id="@+id/nav_ips"

@@ -1,10 +1,12 @@
 package com.protegemos.protegemospersonas.ui.beneficiario;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,36 +17,56 @@ import com.protegemos.protegemospersonas.data.model.Beneficiario;
 
 import java.util.List;
 
-public class BeneficiarioAdapter extends ArrayAdapter<Beneficiario> {
+public class BeneficiarioAdapter extends BaseAdapter {
 
-    TextView lbl_nomb, lbl_apeb, lbl_edadb, lbl_parb;
+    private Activity actividad;
+    private List<Beneficiario> list;
+
+    public BeneficiarioAdapter(Activity context, List<Beneficiario> beneficiarios) {
+        actividad=context;
+        list=beneficiarios;
+    }
+
+    @Override
+    public int getCount() {
+        return list.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return list.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Beneficiario beneficiario=getItem(position);
+        View v = convertView;
         if (convertView==null){
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.datos_beneficiarios, parent, false);
+            LayoutInflater inflater = (LayoutInflater) actividad.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            v=inflater.inflate(R.layout.datos_beneficiarios, null);
         }
-
+        Beneficiario movimiento = list.get(position);
         /*Asignar los text view al controlador de la vista*/
-        lbl_nomb=(TextView)convertView.findViewById(R.id.lbl_nomb);
-        lbl_apeb=(TextView)convertView.findViewById(R.id.lbl_apeb);
-        lbl_edadb=(TextView)convertView.findViewById(R.id.lbl_edadb);
-        lbl_parb=(TextView)convertView.findViewById(R.id.lbl_parb);
+        TextView lbl_nomb=(TextView)v.findViewById(R.id.lbl_nomb);
+        TextView lbl_apeb=(TextView)v.findViewById(R.id.lbl_apeb);
+        TextView lbl_edadb=(TextView)v.findViewById(R.id.lbl_edadb);
+        TextView lbl_parb=(TextView)v.findViewById(R.id.lbl_parb);
 
         /*Ingreso de datos a los text view de la vista usando el modelo*/
-        lbl_nomb.setText(beneficiario.getBenNom());
-        lbl_apeb.setText(beneficiario.getBenApe());
-        lbl_edadb.setText(beneficiario.getBenEdad());
-        lbl_parb.setText(beneficiario.getBenPar());
+        lbl_nomb.setText(movimiento.getBenNom());
+        lbl_apeb.setText(movimiento.getBenApe());
+        lbl_edadb.setText(movimiento.getBenEdad());
+        lbl_parb.setText(movimiento.getBenPar());
 
-        return convertView;
+        return v;
     }
 
-    public BeneficiarioAdapter(@NonNull Context context, @NonNull List<Beneficiario> beneficiarios) {
-        super(context, 0, beneficiarios);
-    }
+
 
 
 }

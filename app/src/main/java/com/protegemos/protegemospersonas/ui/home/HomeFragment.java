@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +17,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.protegemos.protegemospersonas.R;
+import com.protegemos.protegemospersonas.ui.beneficiario.BeneficiarioFragment;
+
 
 import static androidx.navigation.Navigation.findNavController;
 
@@ -32,6 +35,14 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        Intent i = getActivity().getIntent();
+        String numBeneficiario = i.getStringExtra("contrato");
+        Toast.makeText(getContext(),numBeneficiario, Toast.LENGTH_LONG).show();
+
+        Intent i2 = new Intent(getContext(), BeneficiarioFragment.class);
+        i2.putExtra("contrato",numBeneficiario);
+
 
         ImageButton guia = root.findViewById(R.id.img_guia);
         ImageButton ips = root.findViewById(R.id.img_ips);

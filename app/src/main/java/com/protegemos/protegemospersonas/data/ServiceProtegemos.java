@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.protegemos.protegemospersonas.data.model.Beneficiario;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,6 +14,8 @@ import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -69,5 +73,29 @@ public class ServiceProtegemos {
             e.printStackTrace();
         }
         return res;
+    }
+
+    public List<Beneficiario> objBeneficiarios(String respuesta){
+        int res = 0;
+        List<Beneficiario> beneficiarios= new ArrayList<>();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    Beneficiario beneficiario = new Beneficiario();
+                    beneficiario.setBenNom(object.getString("ben_nom"));
+                    beneficiario.setBenApe(object.getString("ben_ape"));
+                    beneficiario.setBenCc(object.getString("ben_cc"));
+                    beneficiario.setBenEdad(object.getString("ben_edad"));
+                    beneficiario.setBenPar(object.getString("ben_par"));
+                    beneficiarios.add(beneficiario);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return beneficiarios;
     }
 }

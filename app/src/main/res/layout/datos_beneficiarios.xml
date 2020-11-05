@@ -20,40 +20,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingLeft="40dp"
-                android:paddingTop="20dp">
-
-                <TextView
-                    android:id="@+id/txt_bnom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Nombre"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_bape"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Apellido"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_bedad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Edad"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_par"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Parentesco"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                android:paddingTop="20dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,16 +31,15 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/crd_ben"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    app:cardBackgroundColor="#D1F1EE">
+                    android:layout_height="70dp">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="344dp"
                         android:layout_height="match_parent"
-                        android:background="#CADCDB"
+                        android:background="#FFFFFF"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:paddingLeft="40dp">
+                        android:paddingLeft="20dp">
 
                         <TextView
                             android:id="@+id/lbl_nomb"
@@ -104,16 +70,6 @@
                             android:text="TextView" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/text_gallery"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
 
             </LinearLayout>
 

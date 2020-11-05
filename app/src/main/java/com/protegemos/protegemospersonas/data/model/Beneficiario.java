@@ -3,7 +3,7 @@ package com.protegemos.protegemospersonas.data.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Beneficiario implements Parcelable {
+public class Beneficiario {
     private String prefijo;
     private String conCod;
     private String benNum;
@@ -16,7 +16,10 @@ public class Beneficiario implements Parcelable {
     private String benMuerte;
     private String fecnac;
 
-    public Beneficiario( String benNom, String benApe, String benEdad, String benPar) {
+    public Beneficiario() {
+    }
+
+    public Beneficiario(String benNom, String benApe, String benEdad, String benPar) {
 
         this.benApe = benApe;
         this.benNom = benNom;
@@ -25,31 +28,7 @@ public class Beneficiario implements Parcelable {
 
     }
 
-    protected Beneficiario(Parcel in){
-        prefijo = in.readString();
-        conCod = in.readString();
-        benNum = in.readString();
-        benCc = in.readString();
-        benApe = in.readString();
-        benNom = in.readString();
-        benEdad = in.readString();
-        benPar = in.readString();
-        estado = in.readString();
-        benMuerte = in.readString();
-        fecnac = in.readString();
-    }
 
-    public static final Creator<Beneficiario> CREATOR= new Creator<Beneficiario>() {
-        @Override
-        public Beneficiario createFromParcel(Parcel in) {
-            return new Beneficiario(in);
-        }
-
-        @Override
-        public Beneficiario[] newArray(int size) {
-            return new Beneficiario[0];
-        }
-    };
 
     public String getPrefijo() {
         return prefijo;
@@ -139,17 +118,4 @@ public class Beneficiario implements Parcelable {
         this.fecnac = fecnac;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(benNom);
-        dest.writeString(benApe);
-        dest.writeString(benEdad);
-        dest.writeString(benPar);
-
-    }
 }

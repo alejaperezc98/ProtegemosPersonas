@@ -133,7 +133,9 @@ public class LoginActivity extends AppCompatActivity {
                                 int r = util.objJSON(res,LoginActivity.this);
                                 if (r > 0) {
                                     bandera = 0;
+                                    Toast.makeText(getApplicationContext(),usernameEditText.getText(), Toast.LENGTH_LONG).show();
                                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                                    i.putExtra("contrato",usernameEditText.getText());
                                     loadingProgressBar.setVisibility(View.GONE);
                                     startActivity(i);
                                 } else {

@@ -2,12 +2,12 @@
     <string name="app_name">Protegemos Personas</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Usuario</string>
+    <string name="nav_header_subtitle">Bienvenido Protegemos</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ajustes</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Inicio</string>
     <string name="menu_perfil">Perfil</string>
     <string name="menu_beneficiario">Beneficiarios</string>
     <string name="menu_sedes">Sedes</string>
@@ -71,4 +71,15 @@
     <string name="plan_egpmayores">Para personas mayores de 75 años:</string>
     <string name="plan_egpmy">Si al momento de la afiliación el beneficiario mayor de SETENTA Y CINCO (75) años de edad padece alguna enfermedad preexistente y consecuencia de ella fallece, ó si durante la vigencia del contrato detectan una enfermedad grave, y producto de éstas se presenta el fallecimiento, no habrá lugar a la cobertura del servicio exequial.</string>
 
+    <string name="mision">MISIÓN</string>
+    <string name="msn">Protegemos es una novedosa revista dedicada a la investigación científica, cultural, pedagógica y de bienestar, que proporciona a nuestros suscriptores una serie de servicios que garantizan una mejor calidad de vida.</string>
+
+    <string name="vision">VISIÓN</string>
+    <string name="vsn">Para el año 2020, proyectarnos como el mejor medio informatico del territorio Colombiano especializado en la investigación cientifica, cultural, pedagógica y de bienestar, junto a las personas, instituciones y empresas que promocionan sus servicios con valores agregados que beneficien tanto a los anunciantes como a los suscriptores.</string>
+
+    <string name="apoyo">APOYO LEGAL</string>
+    <string name="apy">GRUPO EDITORIAL PROTEGEMOS S.A. se encuentra registrado legalmente en las diferentes cámaras de comercio del país. Así mismo en la División de Impuestos y Aduanas Nacionales (DIAN) con el Nit: 900199617-3 y cumpliendo con los requisitos de la ley 232 de 1995, además contribuimos con todos los impuestos al Fisco Estatal como puede verificarse en las entidades públicas respectivas.</string>
+
+    <string name="politicas">POLÍTICAS DE CALIDAD</string>
+    <string name="pltcs">Satisfacer las necesidades de nuestros anunciantes y suscriptores con los mejores estándares de calidad respecto a la publicación de sus portafolios, de igual forma ofrecer una excelente atención en todos nuestros servicios gracias al talento humano con el que cuenta Nuestra Empresa.</string>
 </resources>
