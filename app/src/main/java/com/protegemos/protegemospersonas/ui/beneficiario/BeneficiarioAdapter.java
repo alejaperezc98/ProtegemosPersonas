@@ -65,8 +65,4 @@ public class BeneficiarioAdapter extends BaseAdapter {
 
         return v;
     }
-
-
-
-
 }

@@ -11,14 +11,17 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_ips2"
+            android:id="@+id/action_nav_home_to_nav_ips"
             app:destination="@id/nav_ips" />
         <action
             android:id="@+id/action_nav_home_to_nav_exe"
             app:destination="@id/nav_exe" />
         <action
-            android:id="@+id/action_nav_home_to_nav_rev2"
+            android:id="@+id/action_nav_home_to_nav_rev"
             app:destination="@id/nav_rev" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_guia"
+            app:destination="@id/nav_guia" />
     </fragment>
 
     <fragment
@@ -44,9 +47,10 @@
         tools:layout="@layout/fragment_renovar" />
     <fragment
         android:id="@+id/nav_citas"
-        android:name="com.protegemos.protegemospersonas.ui.citas.CitasFragment"
+        android:name="com.protegemos.protegemospersonas.ui.citas.SolicitarCitaFragment"
         android:label="@string/menu_citas"
-        tools:layout="@layout/fragment_citas" />
+        tools:layout="@layout/fragment_solicitarcita"/>
+
     <fragment
         android:id="@+id/nav_contactanos"
         android:name="com.protegemos.protegemospersonas.ui.contactanos.ContactanosFragment"
@@ -60,10 +64,26 @@
         tools:layout="@layout/fragment_sobre" />
 
     <fragment
+        android:id="@+id/nav_guia"
+        android:name="com.protegemos.protegemospersonas.ui.guia.GuiaFragment"
+        android:label="@string/menu_guia"
+        tools:layout="@layout/fragment_guia" />
+
+    <fragment
         android:id="@+id/nav_ips"
         android:name="com.protegemos.protegemospersonas.ui.ips.IpsFragment"
         android:label="@string/menu_ips"
-        tools:layout="@layout/fragment_ips" />
+        tools:layout="@layout/fragment_ips">
+    <action
+        android:id="@+id/action_nav_ips_to_nav_odontologia"
+        app:destination="@id/nav_odontologia" />
+    <action
+        android:id="@+id/action_nav_ips_to_nav_optometria"
+        app:destination="@id/nav_optometria" />
+    <action
+        android:id="@+id/action_nav_home_to_nav_laboratorio"
+        app:destination="@id/nav_laboratorio" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_exe"
@@ -77,5 +97,29 @@
         android:label="@string/menu_rev"
         tools:layout="@layout/fragment_revista" />
 
+    <!--SERVICIOS DE LA IPS-->
+    <fragment
+        android:id="@+id/nav_odontologia"
+        android:name="com.protegemos.protegemospersonas.ui.servicioips.OdontologiaFragment"
+        android:label="Servicios"
+        tools:layout="@layout/popup_odontologia" />
+
+    <fragment
+        android:id="@+id/nav_optometria"
+        android:name="com.protegemos.protegemospersonas.ui.servicioips.OptometriaFragment"
+        android:label="Servicios"
+        tools:layout="@layout/popup_optometria" />
+
+    <fragment
+        android:id="@+id/nav_laboratorio"
+        android:name="com.protegemos.protegemospersonas.ui.servicioips.LaboratorioFragment"
+        android:label="Servicios"
+        tools:layout="@layout/popup_laboratorio" />
+
+    <!--<fragment
+        android:id="@+id/nav_solicitarCita"
+        android:name="com.protegemos.protegemospersonas.ui.citas.SolicitarCitaFragment"
+        android:label="Servicios"
+        tools:layout="@layout/fragment_solicitarcita" />-->
 
 </navigation>

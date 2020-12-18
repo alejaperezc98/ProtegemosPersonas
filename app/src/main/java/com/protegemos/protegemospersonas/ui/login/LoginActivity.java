@@ -5,7 +5,9 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -27,6 +29,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.protegemos.protegemospersonas.MainActivity;
 import com.protegemos.protegemospersonas.R;
 import com.protegemos.protegemospersonas.data.ServiceProtegemos;
+import com.protegemos.protegemospersonas.ui.beneficiario.BeneficiarioFragment;
 import com.protegemos.protegemospersonas.ui.login.LoginViewModel;
 import com.protegemos.protegemospersonas.ui.login.LoginViewModelFactory;
 
@@ -35,9 +38,6 @@ public class LoginActivity extends AppCompatActivity {
     private LoginViewModel loginViewModel;
     ServiceProtegemos util = new ServiceProtegemos();
     int bandera=0;
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,9 +133,15 @@ public class LoginActivity extends AppCompatActivity {
                                 int r = util.objJSON(res,LoginActivity.this);
                                 if (r > 0) {
                                     bandera = 0;
-                                    Toast.makeText(getApplicationContext(),usernameEditText.getText(), Toast.LENGTH_LONG).show();
+                                    //Toast.makeText(getApplicationContext(),usernameEditText.getText(), Toast.LENGTH_LONG).show();
                                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
                                     i.putExtra("contrato",usernameEditText.getText());
+
+                                    SharedPreferences prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = prefs.edit();
+                                    editor.putString("contrato", usernameEditText.getText().toString());
+                                    editor.commit();
+
                                     loadingProgressBar.setVisibility(View.GONE);
                                     startActivity(i);
                                 } else {

@@ -6,17 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".ui.citas.CitasFragment">
 
-    <TextView
-        android:id="@+id/txt_citas"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_cita"
+                android:layout_width="413dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Citas"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="212dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_citaNomb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaNomb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/lbl_citaFec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaFec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/lbl_citaMed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Médico:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaMed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/lbl_citaTel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaTel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_citaApe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaApe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/lbl_citaHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hora:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/lbl_citaEsp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Especialidad:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaEsp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/lbl_citaObs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Observaciones:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_citaObs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

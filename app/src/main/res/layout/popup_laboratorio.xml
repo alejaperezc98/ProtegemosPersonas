@@ -1,0 +1,135 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_lab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laboratorio Clínico"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/txt_labCon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="CONVENIO CON"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="376dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/txt_labServ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Contamos con:" />
+
+            <TextView
+                android:id="@+id/txt_labHematologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Hematología-coagulación" />
+
+            <TextView
+                android:id="@+id/txt_labQuimica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Química Clínica" />
+
+            <TextView
+                android:id="@+id/txt_electroforesis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Electroforesis de proteínas, hemoglobina y líquuidos" />
+
+            <TextView
+                android:id="@+id/txt_endocrinologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Endocrinología" />
+
+            <TextView
+                android:id="@+id/txt_tumorales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Marcadores tumorales" />
+
+            <TextView
+                android:id="@+id/txt_quimicaOrina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Química de orina y otros liquidos" />
+
+            <TextView
+                android:id="@+id/txt_Inmunologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Inmunología" />
+
+            <TextView
+                android:id="@+id/txt_microbiologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Microbiologia clínica" />
+
+            <TextView
+                android:id="@+id/txt_inmunolofluorescencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Inmunolofluorescencia" />
+
+            <TextView
+                android:id="@+id/txt_espermograma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Andrología: Espermograma" />
+
+            <TextView
+                android:id="@+id/txt_pruebas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Pruebas de estimulación y supresión hormonal" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_citaLab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Agendar Cita" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

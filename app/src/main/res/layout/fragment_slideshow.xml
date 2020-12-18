@@ -20,64 +20,84 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_pasto"
                     android:layout_width="match_parent"
                     android:layout_height="139dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_pasto" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_ipiales"
                     android:layout_width="match_parent"
                     android:layout_height="139dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_ipiales" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_union"
                     android:layout_width="match_parent"
                     android:layout_height="141dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_union" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_pasis"
                     android:layout_width="match_parent"
                     android:layout_height="147dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_puerto" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_mocoa"
                     android:layout_width="match_parent"
                     android:layout_height="145dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_mocoa" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_tumaco"
                     android:layout_width="match_parent"
                     android:layout_height="137dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_tumaco" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_pitalito"
                     android:layout_width="match_parent"
                     android:layout_height="139dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_pitalito" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_popayan"
                     android:layout_width="match_parent"
                     android:layout_height="147dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_popayan" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_neiva"
                     android:layout_width="match_parent"
                     android:layout_height="147dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_neiva" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/img_cali"
                     android:layout_width="match_parent"
                     android:layout_height="136dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitXY"
                     android:src="@drawable/s_cali" />
             </LinearLayout>
         </LinearLayout>

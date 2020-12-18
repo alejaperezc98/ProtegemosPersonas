@@ -1,72 +1,96 @@
 package com.protegemos.protegemospersonas.ui.beneficiario;
 
-import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.protegemos.protegemospersonas.BeneficiarioService;
+import com.google.android.material.snackbar.Snackbar;
+import com.protegemos.protegemospersonas.MainActivity;
 import com.protegemos.protegemospersonas.R;
-import com.protegemos.protegemospersonas.data.entities.BeneficiariosEntity;
+import com.protegemos.protegemospersonas.data.ServiceProtegemos;
+import com.protegemos.protegemospersonas.data.model.Beneficiario;
+import com.protegemos.protegemospersonas.ui.login.LoginActivity;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class BeneficiarioFragment extends Fragment {
 
     private BeneficiarioViewModel beneficiarioViewModel;
+    List<Beneficiario> beneficiariosArrayList = new ArrayList<>();
+    ListView listado;
+    ServiceProtegemos util = new ServiceProtegemos();
+    View root;
+
     private SharedPreferences preferences;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         beneficiarioViewModel =
                 new ViewModelProvider(this).get(BeneficiarioViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        beneficiarioViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        root = inflater.inflate(R.layout.fragment_beneficiario, container, false);
+
+        SharedPreferences prefs = getActivity().getSharedPreferences("Preferences", 0);
+        String contrato = prefs.getString("contrato", "");
+
+        listado = (ListView) root.findViewById(R.id.lista_beneficiarios);
+        requestDatos(contrato);
         return root;
     }
 
-    private void consultaBeneficiarios(){
-
-        SharedPreferences prefs = getSharedPreferences("user",MODE_PRIVATE);
-        String restoredText = prefs.getString("user", null);
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://181.62.161.60/kubica/app/beneficiarios.php")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        BeneficiarioService beneficiarioService = retrofit.create(BeneficiarioService.class);
-        Call<List<BeneficiariosEntity>> call = beneficiarioService.getBeneficiario("46712");
-        call.enqueue(new Callback<List<BeneficiariosEntity>() {
+    public void requestDatos(String contrato) {
+        Thread tr = new Thread() {
             @Override
-            public void onFailure(Call<List<BeneficiariosEntity>> call, Throwable t) {
+            public void run() {
+                final String res = util.recibirObjeto("?con_cod=" + contrato + "&prefijo=D", "http://181.62.161.60/kubica/app/beneficiarios.php");
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        beneficiariosArrayList = util.objBeneficiarios(res);
+                        if (beneficiariosArrayList.size() > 0) {
+                            BeneficiarioAdapter adapter = new BeneficiarioAdapter(getActivity(), beneficiariosArrayList);
+                            listado.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+                        } else {
+                            Snackbar.make(root, "No se encontraron beneficiaros en la BD", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    }
+                });
             }
-        });
+        };
+        tr.start();
     }
 
-    public String getSharedPreferences(Context context, String prefKey) {
-        SharedPreferences sharedPreferences = PreferenceManager .getDefaultSharedPreferences(context);
-        return sharedPreferences.getString(prefKey, ""); }
+    public void parserJson(JSONObject response) {
+        try {
+
+            JSONArray nowPlaying = response.getJSONArray("results");
+
+        } catch (JSONException e) {
+            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+
+    }
+
 }
+
+
+
+
+
+

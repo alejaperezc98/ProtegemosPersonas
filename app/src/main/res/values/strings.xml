@@ -2,8 +2,8 @@
     <string name="app_name">Protegemos Personas</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Usuario</string>
-    <string name="nav_header_subtitle">Bienvenido Protegemos</string>
+    <string name="nav_header_title">Protegemos</string>
+    <string name="nav_header_subtitle">Bienvenido</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Ajustes</string>
 
@@ -17,6 +17,7 @@
     <string name="menu_web">Sitio Web</string>
     <string name="menu_sobre">Acerca de</string>
     <string name="menu_out">Cerrar sesion</string>
+    <string name="menu_guia">Guia de Servicios</string>
     <string name="menu_ips">Servicios</string>
     <string name="menu_exe">Previsión Exequial</string>
     <string name="menu_rev">Revistas Virtuales</string>
@@ -82,4 +83,5 @@
 
     <string name="politicas">POLÍTICAS DE CALIDAD</string>
     <string name="pltcs">Satisfacer las necesidades de nuestros anunciantes y suscriptores con los mejores estándares de calidad respecto a la publicación de sus portafolios, de igual forma ofrecer una excelente atención en todos nuestros servicios gracias al talento humano con el que cuenta Nuestra Empresa.</string>
+
 </resources>

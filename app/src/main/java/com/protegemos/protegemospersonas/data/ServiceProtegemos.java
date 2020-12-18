@@ -5,6 +5,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.protegemos.protegemospersonas.data.model.Beneficiario;
+import com.protegemos.protegemospersonas.data.model.Cita;
+import com.protegemos.protegemospersonas.data.model.Especialidad;
+import com.protegemos.protegemospersonas.data.model.Guia;
+import com.protegemos.protegemospersonas.data.model.Medico;
+import com.protegemos.protegemospersonas.data.model.Perfil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,6 +19,7 @@ import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -25,6 +31,9 @@ import java.util.Scanner;
 public class ServiceProtegemos {
 
     static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+    ArrayList<String> especialidades;
+    ArrayList<String> medicos;
 
     public String recibirObjeto(String parametros, String urlin) {
         HttpURLConnection connection = null;
@@ -98,4 +107,143 @@ public class ServiceProtegemos {
         }
         return beneficiarios;
     }
+
+    public List<String> objEspecialidades(String respuesta){
+        int res = 0;
+        List<String> especialidads= new ArrayList<>();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    String especialidad = object.getString("espe_nomb");
+                    especialidads.add(especialidad);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return especialidads;
+    }
+
+    public List<Guia> objGuia(String respuesta){
+        int res = 0;
+        List<Guia> guias= new ArrayList<>();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    Guia guia = new Guia();
+                    guia.setMediNomb(object.getString("medi_nomb"));
+                    guia.setEspeNomb(object.getString("espe_nomb"));
+                    guia.setMediDire(object.getString("medi_dire"));
+                    guias.add(guia);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return guias;
+    }
+
+    public Perfil objPerfil(String respuesta){
+        int res = 0;
+        Perfil perfil= new Perfil();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    perfil.setPerNom(object.getString("per_nom"));
+                    perfil.setPerApe(object.getString("per_ape"));
+                    perfil.setPerTel(object.getString("per_tel"));
+                    perfil.setPerCel(object.getString("per_cel"));
+                    perfil.setPerCiu(object.getString("per_ciu"));
+                    perfil.setPerBar(object.getString("per_bar"));
+                    perfil.setPerMail(object.getString("per_mail"));
+                    perfil.setPerEmp(object.getString("per_emp"));
+                    perfil.setPerDir(object.getString("per_dir"));
+                    perfil.setPerRef(object.getString("per_ref"));
+                    perfil.setPerRtel(object.getString("per_rtel"));
+                    perfil.setFvenc(object.getString("per_fvenc"));
+                    perfil.setNomplan(object.getString("nom_plan"));
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return perfil;
+    }
+
+    public List<Cita> objCita(String respuesta){
+        int res = 0;
+        List<Cita> citas= new ArrayList<>();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    Cita cita = new Cita();
+                    cita.setCitaNomb(object.getString("cita_nom"));
+                    cita.setCitaApel(object.getString("cita_ape"));
+                    cita.setCitaFeci(object.getString("cita_fecha"));
+                    cita.setCitaHora(object.getString("cita_hora"));
+                    cita.setMediNomb(object.getString("med_nomb"));
+                    cita.setEspeNomb(object.getString("esp_nom"));
+                    cita.setCitaTele(object.getString("cita_tel"));
+                    cita.setCitaObse(object.getString("cita_obs"));
+                    citas.add(cita);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return citas;
+    }
+
+    public List<Especialidad> objEsp(String respuesta){
+        int res = 0;
+        ArrayList<Especialidad> especialidads=new ArrayList<>();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    Especialidad especialidad = new Especialidad();
+                    especialidad.setEspe_codi(object.getString("espe_codi"));
+                    especialidad.setEspe_nomb(object.getString("espe_nomb"));
+                    especialidads.add(especialidad);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return especialidads;
+    }
+
+    public List<String> objMedicos(String respuesta){
+        int res = 0;
+        List<String> medicos= new ArrayList<>();
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                    String medico = object.getString("medi_nomb");
+                    medicos.add(medico);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return medicos;
+    }
+
 }

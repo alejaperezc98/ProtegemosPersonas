@@ -6,22 +6,31 @@
     android:layout_gravity="center">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="413dp"
-        android:layout_height="34dp"
-        android:gravity="center"
+        android:id="@+id/txt_cita"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:paddingBottom="10dp"
         android:text="Beneficiarios"
-        android:textSize="18sp"
+        android:textAlignment="center"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lista_beneficiarios"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
-        android:paddingTop="35dp">
+        android:paddingTop="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txt_bnom"
@@ -63,12 +72,13 @@
     <ListView
         android:id="@+id/lista_beneficiarios"
         android:layout_width="410dp"
-        android:layout_height="590dp"
+        android:layout_height="0dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_cita" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

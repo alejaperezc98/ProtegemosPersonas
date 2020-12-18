@@ -1,0 +1,77 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_opto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Óptica"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="376dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/txt_optoServ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Nuestros servicios:" />
+
+            <TextView
+                android:id="@+id/txt_valoracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Valoración gratis" />
+
+            <TextView
+                android:id="@+id/txt_monturas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Monturas de excelente calidad" />
+
+            <TextView
+                android:id="@+id/txt_monturas2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Monturas gratis en referencias seleccionadas" />
+
+            <TextView
+                android:id="@+id/txt_descuento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="Descuento del 30% en lentes" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_citaOpto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Agendar Cita" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

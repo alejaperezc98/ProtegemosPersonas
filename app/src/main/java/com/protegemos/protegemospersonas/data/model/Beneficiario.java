@@ -28,36 +28,6 @@ public class Beneficiario {
 
     }
 
-
-
-    public String getPrefijo() {
-        return prefijo;
-    }
-
-    public void setPrefijo(String prefijo) {
-        this.prefijo = prefijo;
-    }
-
-    public String getConCod() {
-        return conCod;
-    }
-
-    public void setConCod(String conCod) {
-        this.conCod = conCod;
-    }
-
-    public String getBenNum() {
-        return benNum;
-    }
-
-    public void setBenNum(String benNum) {
-        this.benNum = benNum;
-    }
-
-    public String getBenCc() {
-        return benCc;
-    }
-
     public void setBenCc(String benCc) {
         this.benCc = benCc;
     }

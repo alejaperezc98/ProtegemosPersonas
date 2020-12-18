@@ -27,6 +27,7 @@
                     android:layout_height="120dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="fitXY"
+                    android:clickable="true"
                     android:src="@drawable/ips_odontologia" />
 
                 <ImageButton
@@ -35,6 +36,7 @@
                     android:layout_height="120dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="fitXY"
+                    android:clickable="true"
                     android:src="@drawable/ips_optometria"
                     android:tint="#00FFFFFF" />
 
@@ -44,6 +46,7 @@
                     android:layout_height="120dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="fitXY"
+                    android:clickable="true"
                     android:src="@drawable/ips_lab" />
 
                 <ImageButton
@@ -52,6 +55,7 @@
                     android:layout_height="120dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="fitXY"
+                    android:clickable="true"
                     android:src="@drawable/ips_medicina" />
             </LinearLayout>
         </LinearLayout>
