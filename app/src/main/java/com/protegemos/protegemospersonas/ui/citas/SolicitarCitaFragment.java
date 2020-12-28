@@ -30,41 +30,72 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnItemSelected;
+
+import static androidx.navigation.Navigation.findNavController;
 
 public class SolicitarCitaFragment extends Fragment {
 
     private SolicitarCitaViewModel solicitarCitaViewModel;
 
-    List<String> especialidadList = new ArrayList<>();
-    List<String> medicoList = new ArrayList<>();
+    ArrayList<String> especialidadList = new ArrayList<>();
+    ArrayList<String> medicoList = new ArrayList<>();
 
     /**/
     private Spinner  spn_medi;
     private EditText nombre, telefono;
-    private Button enviar;
+    Button btn_enviar;
 
     ServiceProtegemos util = new ServiceProtegemos();
     View root;
+    
 
     @BindView(R.id.spin_especialidad)
     Spinner spn_esp;
 
+    /*@BindView(R.id.btn_enviar)
+    Button enviar;*/
+
+    /*@OnClick
+    public void btn(Button enviar){
+        sendMail();
+    }*/
+
+
     @OnItemSelected(R.id.spin_especialidad)
-    public void onSpinnerItemSelected(int index){ spn_esp.getSelectedItem().toString();}
+    public void onSpinnerItemSelected(int index){
+        Thread tr = new Thread() {
+            @Override
+            public void run() {
+                final String res = util.recibirObjeto("?espe_codi="+spn_esp.getSelectedItem().toString(), "http://181.62.161.60/kubica/app/medico.php");
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        medicoList = util.objMedicos(res);
+
+                        if (medicoList.size() > 0) {
+                            spn_medi.setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, medicoList));
+                        }
+                    }
+                });
+            }
+        };
+        tr.start();
+
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         solicitarCitaViewModel = new ViewModelProvider(this).get(SolicitarCitaViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_solicitarcita, container, false);
+        root = inflater.inflate(R.layout.fragment_solicitarcita, container, false);
         ButterKnife.bind(this,root);
 
         nombre = (EditText) root.findViewById(R.id.editTxt_name);
         telefono = (EditText) root.findViewById(R.id.editTxt_phone);
         spn_medi = (Spinner) root.findViewById(R.id.spin_medico);
-        enviar = (Button) root.findViewById(R.id.btn_enviar);
-
+        btn_enviar = (Button) root.findViewById(R.id.btn_enviar);
 
 
         Thread tr = new Thread() {
@@ -87,61 +118,57 @@ public class SolicitarCitaFragment extends Fragment {
         };
         tr.start();
 
-        spn_esp.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-                    public void onItemSelected(AdapterView<?> spn, android.view.View v, int posicion, long id) {
-                        //onSpinnerItemSelected(posicion);
-                        spn.getItemIdAtPosition(posicion);
-                        Toast.makeText(getContext(),posicion, Toast.LENGTH_LONG).show();
-                        Thread tr = new Thread() {
-                            @Override
-                            public void run() {
-                                final String res = util.recibirObjeto("medico.php?"+posicion, "http://181.62.161.60/kubica/app/medico.php");
-                                getActivity().runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        especialidadList = util.objEspecialidades(res);
-                                        if (especialidadList.size() > 0) {
-                                            spn_esp.setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, especialidadList));
-                                        } else {
-                                            Snackbar.make(root, "No se encontraron datos en la BD", Snackbar.LENGTH_LONG)
-                                                    .setAction("Action", null).show();
-                                        }
-                                    }
-                                });
-                            }
-                        };
-                        tr.start();
-
-                    }
-                    public void onNothingSelected(AdapterView<?> spn) {
-                    }
-                });
-
-
-        enviar.setOnClickListener(new View.OnClickListener() {
+        btn_enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMail();
+                Toast.makeText(getContext(),"Enviando Mensaje...", Toast.LENGTH_LONG).show();
+                Thread tr = new Thread() {
+                    @Override
+                    public void run() {
+                        final String res = util.recibirObjeto("?nombre" +
+                                "="+nombre.getText().toString().trim()+"&telefono="+telefono.getText().toString().trim()+"&especialista="+spn_esp.getSelectedItem().toString()+"&medico="+spn_medi.getSelectedItem().toString(), "http://181.62.161.60/kubica/validacita.php");
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                int i = util.objCitas(res);
+                                if (i == 1) {
+                                    getActivity().onBackPressed();
+
+                                } else {
+                                    Toast.makeText(getContext(),"Mensaje enviado", Toast.LENGTH_LONG).show();
+                                    /*Snackbar.make(root, "Mensaje Enviado", Snackbar.LENGTH_LONG)
+                                            .setAction("Action", null).show();*/
+                                }
+                            }
+                        });
+                    }
+                };
+                tr.start();
             }
         });
+
         return root;
     }
 
-
     private void sendMail() {
-        /*String nomb=nombre.getText().toString();
-        String tel= telefono.getText().toString();
+        Thread tr = new Thread() {
+            @Override
+            public void run() {
+                final String res = util.recibirObjeto("?nombre="+nombre.getText().toString().trim()+"&telefono="+telefono.getText().toString().trim()+"&especialista="+spn_esp.getSelectedItem().toString()+"&medico="+spn_medi.getSelectedItem().toString(), "http://181.62.161.60/kubica/validacita.php");
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        int i = util.objCitas(res);
+                        if (i == 1) {
+                            getActivity().onBackPressed();
+                        } else {
 
-        Intent intent= new Intent(Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"alejaperez98@gmail.com"});
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Solicitar cita");
-        intent.putExtra(Intent.EXTRA_TEXT,"Nombre: "+nomb+"\n Telefono: "+tel);
-
-        intent.setType("message/rfc822");
-        startActivity(Intent.createChooser(intent, "Cliente email"));*/
+                        }
+                    }
+                });
+            }
+        };
+        tr.start();
     }
-
-
 }
 

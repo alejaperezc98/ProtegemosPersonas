@@ -3,6 +3,7 @@ package com.protegemos.protegemospersonas.data;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.widget.ArrayAdapter;
 
 import com.protegemos.protegemospersonas.data.model.Beneficiario;
 import com.protegemos.protegemospersonas.data.model.Cita;
@@ -108,9 +109,9 @@ public class ServiceProtegemos {
         return beneficiarios;
     }
 
-    public List<String> objEspecialidades(String respuesta){
+    public ArrayList<String> objEspecialidades(String respuesta){
         int res = 0;
-        List<String> especialidads= new ArrayList<>();
+        ArrayList<String> especialidads= new ArrayList<>();
         try {
             JSONArray json = new JSONArray(respuesta);
             if (json.length() > 0) {
@@ -227,9 +228,9 @@ public class ServiceProtegemos {
         return especialidads;
     }
 
-    public List<String> objMedicos(String respuesta){
+    public ArrayList<String> objMedicos(String respuesta){
         int res = 0;
-        List<String> medicos= new ArrayList<>();
+        ArrayList<String> medicos= new ArrayList<>();
         try {
             JSONArray json = new JSONArray(respuesta);
             if (json.length() > 0) {
@@ -244,6 +245,22 @@ public class ServiceProtegemos {
             e.printStackTrace();
         }
         return medicos;
+    }
+
+    public int objCitas(String respuesta){
+        int res = 0;
+        try {
+            JSONArray json = new JSONArray(respuesta);
+            if (json.length() > 0) {
+                res = 1;
+                for (int i = 0; i < json.length(); i++) {
+                    JSONObject object = json.getJSONObject(i);
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return res;
     }
 
 }
